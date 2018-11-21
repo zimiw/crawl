@@ -15193,8 +15193,35 @@ var filt = hos.filter(function(item, index) {
     }
 })
 
+
+function JsonToXlsn(arr,name){
+	let result = [];
+	let content = {	
+		name,
+		data : []
+	}
+	let title = [];
+	for(let item in arr[0]){
+		title.push(item);
+	}
+	content.data.push(title);
+	for(let it of arr){
+		let temp = [];
+		for(let attr in it){
+			temp.push(it[attr])
+		}
+		content.data.push(temp);
+	}
+	result.push(content)
+	return result;
+}	
+
+
+
+
+
 // 写xlsx
-var buffer = xlsx.build(filt);
+var buffer = xlsx.build(JsonToXlsn(hos,'浙江省'));
 fs.writeFile('./resut.xls', buffer, function(err) {
     if (err)
         throw err;
