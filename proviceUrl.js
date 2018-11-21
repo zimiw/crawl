@@ -1,0 +1,3 @@
+var arr = ["/shanghai/", "/jiangsu/", "/zhejiang/", "/anhui/", "/fujian/",  "/shandong/", "/beijing/", "/tianjin/", "/hebei/", "/shanxi/", "/neimenggu/", "/suchuan/", "/guizhou/", "/yunnan/", "/chongqing/", "/xizang/", "/shanxisheng/", "/gansu/", "/qinghai/", "/ningxia/", "/xinjiang/", "/heilongjiang/", "/jilin/", "/liaoning/", "/henan/", "/hubei/", "/hunan/", "/jiangxi/", "/guangdong/", "/guangxi/", "/hainan/", "/xianggang/", "/aomen/", "/taiwan/"]
+
+console.log(arr.length)

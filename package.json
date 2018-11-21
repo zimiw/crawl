@@ -1,0 +1,16 @@
+{
+  "name": "crawl",
+  "version": "1.0.0",
+  "description": "crawl",
+  "author": "wangzhiming",
+  "private": true,
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "node-xlsx": "^0.12.1",
+    "request": "^2.88.0",
+    "superagent": "^4.0.0"
+  }
+}

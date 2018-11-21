@@ -1,0 +1,1 @@
+[{"name":"","grade":"","medical":"","state":"","alias":"","type":"","tel":"","address":""},{"name":"","grade":"","medical":"","state":"","alias":"","type":"","tel":"","address":""},{"name":"澳门镜湖医院","grade":"未知","medical":"其他","state":"","alias":"别名：澳门镜湖医院","type":"性质：其他/综合医院","tel":"00853-28922822","address":"澳门半岛镜湖马路33号"}]
