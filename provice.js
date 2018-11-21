@@ -68,7 +68,7 @@ function fetchData(url, callback) {
 
 
 let hosUrl = [];
-let path = '/anhui/'
+let path = '/zhejiang/'
 
 
 superagent.get(baseUrl + path).end(function(err, res) {
@@ -95,7 +95,7 @@ superagent.get(baseUrl + path).end(function(err, res) {
                 var $ = cheerio.load(pair[1]);
                 var par = $('.wrap-name');
                 var info = $('.wrap-info dd');
-                var urlArr = pair[1].split('/');
+                var urlArr = pair[0].split('/');
                 urlArr.pop();
                 return ({
                     'code':urlArr.pop(),

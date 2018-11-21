@@ -1,3 +1,6 @@
+const xlsx = require('node-xlsx');
+const fs = require('fs');
+
 var hos = [{
 	"code": "132177",
 	"name": "杭州丽都白癜风皮肤病医院",
@@ -16869,3 +16872,64 @@ var hos = [{
 	"tel": "0578-8123421/0578-8126387",
 	"address": "遂昌县妙高镇北街143号"
 }]
+
+
+var filt = hos.filter(function(item, index) {
+    if (item.grade == '三级甲等') {
+        return item
+    }
+})
+
+
+function isCodeDum(arr){
+	let hash = {}
+	for(let it of arr){
+		let key = it.code;
+		if(!hash[key]){
+			hash[key] = 1
+		}else{
+			console.log(key)
+		}
+	}
+	console.log(hash)
+}
+
+isCodeDum(filt)
+
+
+function JsonToXlsn(arr,name){
+	let result = [];
+	let content = {	
+		name,
+		data : []
+	}
+	let title = [];
+	for(let item in arr[0]){
+		title.push(item);
+	}
+	content.data.push(title);
+	for(let it of arr){
+		let temp = [];
+		for(let attr in it){
+			temp.push(it[attr])
+		}
+		content.data.push(temp);
+	}
+	result.push(content)
+	return result;
+}	
+
+
+
+
+
+// 写xlsx
+// var buffer = xlsx.build(JsonToXlsn(hos,'浙江省'));
+// fs.writeFile('./浙江省.xls', buffer, function(err) {
+//     if (err)
+//         throw err;
+//     console.log('Write to xls has finished');
+
+// });
+
+//console.log(filt)
